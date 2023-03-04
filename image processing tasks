@@ -1,0 +1,11 @@
+### task 1
+x=[2,3,4]
+x.append(9)
+print("adding new element: ",x)
+x.remove(3)
+print("remove specific element: ",x)
+x.insert(1,7)
+print("insert new element: ",x)
+x.pop() 
+print("delet the last element: ",x) 
+###
