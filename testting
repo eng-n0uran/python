@@ -8,3 +8,52 @@ x=y
 y=z
 z=s
 print(f"after swapping x={x},y={y},z={z}")
+###
+#arrange numbers from the biggest to the smallest
+
+n1 = int(input(" Enter First Number :"))
+n2 = int(input(" Enter First Number :"))
+n3 = int(input(" Enter First Number :"))
+    
+arr = [n1,n2,n3]
+arr.sort()# ترتيب من الاصغر للاكبر
+arr.reverse()# نعكس الترتيب
+print(arr)
+###
+#Write a Python program to multiply all the items in a list
+items=[1,2,-8]
+tot = 1
+for x in items:
+    tot *= x
+print(tot)
+###
+#max num in a list
+mlist=[1,2,-8,0]
+max = mlist[ 0 ]
+for a in mlist:
+    if a > max:
+     max = a
+print(max)
+###
+# creating an empty list
+lst = []
+
+# number of elements as input
+n = int(input("Enter number of elements : "))
+
+# iterating till the range
+for i in range(0, n):
+	ele = int(input("enter list elements:  "))
+
+	lst.append(ele) # adding the element
+	
+print(lst)
+
+
+
+
+
+
+
+
+
