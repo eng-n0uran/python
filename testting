@@ -1,0 +1,10 @@
+#swapping numbers
+x=2
+y=3
+z=9
+print(f"before swapping x={x},y={y},z={z}")
+s=x
+x=y
+y=z
+z=s
+print(f"after swapping x={x},y={y},z={z}")
