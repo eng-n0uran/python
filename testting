@@ -48,7 +48,37 @@ for i in range(0, n):
 	lst.append(ele) # adding the element
 	
 print(lst)
-
+##################################
+### task classes
+class Car:
+  def __init__(self,color,model,year,energy):
+      self.color=color
+      self.model=model
+      self.year=year
+      self.energy=energy
+  def condition(self):
+      if self.year >= 2015:
+          print("it is in a good condition")
+      else:
+          print("it is in a bad condition")
+  def type(self):
+     if self.model=="kia" :
+         print("good model")
+     else:
+         print("not a good model")
+car1=Car("red","kia",2018,"hybrid")
+car2=Car("blue","sheforleh",2020,"high")
+car3=Car("black","toyota",2013,"low")
+print("car1: ",car1.energy)
+car1.condition()
+car1.type()
+print("car3: ",car3.energy)
+car3.condition()
+car3.type()
+print("car2: ",car2.energy)
+car2.condition()
+car2.type()
+#################################
 
 
 
