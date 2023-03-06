@@ -79,6 +79,35 @@ print("car2: ",car2.energy)
 car2.condition()
 car2.type()
 #################################
+import random
+names=["nouran","norseen","omar","hady","acthonoha","ahmed","EG","KSA"]
+randomname=random.choice(names)
+print("random name is :",randomname)
+randomnum=random.randint(1,30)
+print("random number id : ",randomnum)
+####################################
+#try & except
+try:
+    num=int(input("enter a number: "))
+    print("the number is :",num)
+    f=open("python.text",'r')
+    print(f.read())
+except ValueError:
+    print("value is error")
+except FileNotFoundError:
+    print("the document not found")
+          
+
+
+
+
+
+
+
+
+
+
+
 
 
 
