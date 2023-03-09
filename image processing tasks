@@ -9,3 +9,16 @@ print("insert new element: ",x)
 x.pop() 
 print("delet the last element: ",x) 
 ###
+import cv2
+img=cv2.imread("b1.jpg",0)#gray scale
+#pixel=img[50,50]
+#print(pixel)
+print(img.shape)
+print(img.size)
+print(img.dtype)
+cv2.imshow("bears",img)
+cv2.waitKey()
+
+cv2.imwrite("mybears",img)
+cv2.destroyAllWindows()
+####
