@@ -21,4 +21,41 @@ cv2.waitKey()
 
 cv2.imwrite("mybears",img)
 cv2.destroyAllWindows()
-####
+##############################
+### task 2
+import cv2
+import numpy as np
+#On the white image drawing line ,rectangle ,circle .
+#line
+window1=np.ones([500,500,3])
+print(window1)
+cv2.line(window1,(0,0),(200,250),(100,200,0),5)
+cv2.imshow("line",window1)
+#rectangle
+window2=np.ones([500,500,3])
+cv2.rectangle(window2,(30,30),(180,230),(100,0,100),10)
+cv2.imshow("rectangle",window2)
+#circle
+window3=np.ones([500,500,3])
+cv2.circle(window3,(150,150),90,(0,150,100),6)
+cv2.imshow("circle",window3)
+img=cv2.imread('im0.jpg',1)
+#value of specific pixel 
+pixel=img[120,120]
+print("the value of pixel ",pixel)
+# modify it
+img[120,120]=[240]
+img[200:250,200:250]=[0]
+#display the red, green, and blue channel, separately 
+b,g,r=cv2.split(img)
+cv2.imshow('blue_image',b)
+cv2.imshow('green_image',g)
+cv2.imshow('red_image',r)
+#Modify the size of the image
+print(" image shape : ",img.shape)
+sizee = cv2.resize(img, (500, 500))
+cv2.imshow("size",sizee)
+cv2.imshow("bears",img)
+cv2.waitKey()
+cv2.imwrite("mybears",img)
+cv2.destroyAllWindows()
