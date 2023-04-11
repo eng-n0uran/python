@@ -59,3 +59,30 @@ cv2.imshow("bears",img)
 cv2.waitKey()
 cv2.imwrite("mybears",img)
 cv2.destroyAllWindows()
+############################################
+#task 5
+from matplotlib import pyplot as plt
+import cv2
+import numpy as np
+img6=cv2.imread("img6.jpg")
+mask=np.ones((5,5))
+dilation=cv2.dilate(img6,mask,iterations=1)
+erosion=cv2.erode(img6,mask,iterations=1)
+opening=cv2.morphologyEx(img6,cv2.MORPH_OPEN,mask)#Opening=erosion followed by dilation 
+closing=cv2.morphologyEx(img6,cv2.MORPH_CLOSE,mask)#closing operation=Dilation followed by Erosion
+im6=cv2.imread("im6.jpg")
+blur=cv2.blur(im6,(20,20))
+blur2=cv2.blur(img6,(10,10))
+#plt.subplot(141)
+cv2.imshow("img6",img6)
+cv2.imshow("dilation",dilation)
+cv2.imshow("erosion",erosion)
+cv2.imshow("opening",opening)
+cv2.imshow("closing",closing)
+cv2.imshow("im6",im6)
+cv2.imshow("blur filter",blur)
+cv2.imshow("blur filter",blur2)
+cv2.waitKey()
+
+cv2.imwrite("img",dilation)
+cv2.destroyAllWindows()
