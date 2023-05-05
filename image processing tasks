@@ -86,3 +86,22 @@ cv2.waitKey()
 
 cv2.imwrite("img",dilation)
 cv2.destroyAllWindows()
+#################################################
+#task 6
+import cv2
+im=cv2.imread("s&p.png")#with salt and pepper noise
+im2=cv2.imread("gon.ppm")#with gaussian noise
+blur=cv2.blur(im2,(3,3))#average filter
+median=cv2.medianBlur(im2,5)#median filter
+gaussian=cv2.GaussianBlur(im2,(3,3),0)#gaussian filter
+cv2.imshow("orginal",im)
+cv2.imshow("orginal",im2)
+cv2.imshow("average filter",blur)
+cv2.imshow("median filter",median)
+cv2.imshow("gaussian filter",gaussian)
+
+
+cv2.waitKey(0)
+cv2.destroyAllWindows()
+cv2.waitKey(1)
+
