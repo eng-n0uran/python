@@ -185,3 +185,38 @@ cv2.imshow("Prewitt", img_prewittx + img_prewitty)
 cv2.waitKey(0)
 cv2.destroyAllWindows()
 ##########################################################
+#image project
+import cv2
+import numpy as np
+
+im=cv2.imread("bird.jpg")
+size = cv2.resize(im , (800,500))
+rgb=cv2.cvtColor(im,cv2.COLOR_BGR2RGB)
+r,g,b=cv2.split(rgb)
+gaussian= cv2.GaussianBlur(b,(11,11),0)
+ret2,BW =cv2.threshold(gaussian,0,255,cv2.THRESH_BINARY+cv2.THRESH_OTSU)
+median=cv2.medianBlur(BW,15)
+mask=np.ones((10,10))
+bird=cv2.morphologyEx(median,cv2.MORPH_OPEN,mask)
+cv2.imshow("n", bird)
+cv2.imshow("orginal",im)
+cv2.waitKey(0)
+cv2.destroyAllWindows()
+##########################
+
+from matplotlib import pyplot as plt
+import numpy as np
+import cv2
+im=cv2.imread("p.jpg")
+gray = cv2.cvtColor(im, cv2.COLOR_BGR2GRAY)
+mask=np.ones((15,15))
+erosion=cv2.erode(gray,mask,iterations=1)
+
+canny = cv2.Canny(erosion,100,200)
+blur=cv2.blur(canny,(15,15))
+cv2.imshow("orginal", gray)
+cv2.imshow("s",blur)
+cv2.waitKey(0)
+cv2.destroyAllWindows()
+cv2.waitKey(1)
+
